@@ -18,7 +18,7 @@ export default function Home() {
 
     const handleDelete = async (id) => {
         try {
-            await fetch('/api/delete', {
+            await fetch('https://cloudinary-api-crud.herokuapp.com/api/delete', {
                 method: 'POST',
                 body: JSON.stringify({ data: id }),
                 headers: { 'Content-Type': 'application/json' },
