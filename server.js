@@ -10,7 +10,7 @@ app.use(cors());
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
   }) 
-app.get('/api/images', async (req, res) => {
+app.get('https://cloudinary-api-crud.herokuapp.com/api/images', async (req, res) => {
     const { resources } = await cloudinary.search
         .expression(`folder:${process.env.CLOUDINARY_FOLDER_NAME}`)
         .sort_by('public_id', 'desc')
