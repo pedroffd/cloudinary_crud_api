@@ -45,7 +45,7 @@ app.post('/api/upload', async (req, res) => {
     }
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
-    console.log('listening on 3001');
+    console.log('listening on 8080');
 });
