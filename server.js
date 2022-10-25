@@ -38,7 +38,6 @@ app.post('/api/upload', async (req, res) => {
             upload_preset: 'dev_setups',
         });
         console.log(uploadResponse);
-        res.json(uploadResponse)
         res.json({ msg: 'upload successful' });
     } catch (err) {
         console.error(err);
