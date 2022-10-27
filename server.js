@@ -38,7 +38,7 @@ app.post('/api/upload', async (req, res) => {
             upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET,
         });
         console.log(uploadResponse);
-        res.json({ msg: 'upload successful' });
+       res.send(uploadResponse)
     } catch (err) {
         console.error(err);
         res.status(500).json({ err: 'Something went wrong' });
